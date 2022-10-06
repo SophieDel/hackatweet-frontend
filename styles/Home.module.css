@@ -1,22 +1,72 @@
 .main {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  min-height: 100vh;
+}
+
+/* Espace à gauche */ 
+.userSection {
+  background-color: black;
+  border: solid 1px white;
+  grid-column-start: 1;
+  grid-column-end: 4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  justify-content: space-between;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.logoSection {
+  margin: 20px auto auto 40px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.logo {
+  transform : rotate(180deg);
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.userInformationSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 10vh;
+  margin: 0 0 0 1em
 }
+
+.avatarSection {
+  display: flex;
+}
+
+.avatar {
+  border-radius: 30px;
+}
+
+.personalInformationSection{
+  margin: 0 1em 0 1em
+}
+
+.firstname {
+  color: white;
+  font-weight: bold;
+}
+
+.username {
+  color: grey;
+  font-weight: lighter;
+}
+
+/* Espace du milieu */
+.tweetsSection {
+  background-color: black;
+  border: solid 1px white;
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+/* Espace de droite */
+
+.trendsSection {
+  background-color: black;
+  border: solid 1px white;
+  grid-column-start: 10;
+  grid-column-end: 14;
+}
+

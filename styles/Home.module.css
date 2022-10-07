@@ -1,22 +1,116 @@
 .main {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  min-height: 100vh;
+}
+
+.trendsHeaderTitle {
+  font-size: 25px;
+  color: white;
+  margin: 20px
+}
+
+
+/* Espace à gauche */ 
+.userSection {
+  background-color: black;
+  border: solid 1px white;
+  grid-column-start: 1;
+  grid-column-end: 4;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.logoSection {
+  margin: 20px 50px 50px 40px;
+}
+
+.logo {
+  transform : rotate(180deg);
+}
+
+.userInformationSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 10vh;
+  margin: 0 0 0 1em
+}
+
+.avatarSection {
+  display: flex;
+}
+
+.avatar {
+  border-radius: 30px;
+}
+
+.personalInformationSection{
+  margin: 0 1em 0 1em
+}
+
+.firstname {
+  color: white;
+  font-weight: bold;
+}
+
+.username {
+  color: grey;
+  font-weight: lighter;
+}
+
+/* Espace du milieu */
+.tweetsSection {
+  background-color: black;
+  border: solid 1px white;
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+.tweetsHeaderTitle {
+  font-size: 25px;
+  color: white;
+  margin: 20px
+}
+
+.inputContainer {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  background-color: black;
+  margin: 1em 5em 1em 5em
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+
+.tweetInput {
+  background: black;
+  color: white;
+  height: 40px;
+  width: 80%;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.tweetButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 2rem 1rem 1rem
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.tweetButton {
+  background-color: #3F9AF0;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  height: 40px;
+  width: 130px;
 }
+
+/* Espace de droite */
+
+.trendsSection {
+  background-color: black;
+  border: solid 1px white;
+  grid-column-start: 10;
+  grid-column-end: 14;
+}
+

@@ -23,14 +23,14 @@ function Home() {
       body: JSON.stringify({ tweet: newTweet }),
     })
       .then((response) => response.json())
-      .then((data) => console.log(`New tweet! ${data}`));
-    setNewTweet("");
-
-    fetch(`${url}/tweets`)
-      .then((response) => response.json())
       .then((data) => {
-        console.log(data.tweets);
-        setTweetsData(data.tweets);
+        console.log(`New tweet! ${data}`);
+        setNewTweet("");
+        fetch(`${url}/tweets`)
+          .then((response) => response.json())
+          .then((data) => {
+            setTweetsData(data.tweets);
+          });
       });
   };
 
@@ -83,7 +83,9 @@ function Home() {
               type="text"
               placeholder="What's up ?"
               className={styles.tweetInput}
-              onChange={(e) => setNewTweet(e.target.value)}
+              onChange={(e) => setNewTweet(e.target.value)
+              }
+              value={newTweet}
             ></input>
           </div>
           <div className={styles.tweetButtonContainer}>

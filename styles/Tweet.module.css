@@ -1,0 +1,56 @@
+.tweet {
+    border: solid 0.25px grey;
+    padding: 1rem
+}
+
+.userInformation  {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 1px 1px 1px 1px
+}
+
+.avatar{
+    border-radius: 50px;
+}
+
+.userPersonalInformation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem
+    
+}
+
+.firstname {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.username {
+    color: grey;
+    font-weight: lighter;
+    margin: 0px 0px 0px 5px
+}
+
+
+.tweetContent {
+    font-size: 18px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+        /* margin: 10px 0.5px 0.5px 0.5px */
+
+}
+
+.spanTweet {
+    margin: 0px 5px 0px 0px
+}
+
+.timelaps {
+    color: grey;
+    font-weight: lighter;
+    margin: 0px 0px 0px 5px
+}

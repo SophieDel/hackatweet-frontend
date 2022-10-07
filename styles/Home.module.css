@@ -40,10 +40,11 @@
 
 .avatarSection {
   display: flex;
+  margin: 0.5rem
 }
 
 .avatar {
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 .personalInformationSection{

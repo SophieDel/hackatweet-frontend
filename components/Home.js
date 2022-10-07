@@ -23,19 +23,18 @@ function Home() {
       body: JSON.stringify({ tweet: newTweet }),
     })
       .then((response) => response.json())
-      .then((data) => console.log(`New tweet! ${data}`));
-    setNewTweet("");
-
-    fetch(`${url}/tweets`)
-      .then((response) => response.json())
       .then((data) => {
-        console.log(data.tweets);
-        setTweetsData(data.tweets);
+        console.log(`New tweet! ${data}`);
+        setNewTweet("");
+        fetch(`${url}/tweets`)
+          .then((response) => response.json())
+          .then((data) => {
+            setTweetsData(data.tweets);
+          });
       });
   };
 
   const tweets = tweetsData.map((tweet, i) => {
-    // console.log("tweetsData =>", tweetsData)
     const isAuthored = false;
     const isDumped = false;
     // A faire plus tard en fonction du token de la session et du token de la personne qui a tweeté
@@ -43,8 +42,6 @@ function Home() {
       <Tweet key={i} {...tweet} isAuthored={isAuthored} isDumped={isDumped} />
     );
   });
-
-console.log("tweets components", tweets)
 
   return (
     <div className={styles.main}>
@@ -86,7 +83,9 @@ console.log("tweets components", tweets)
               type="text"
               placeholder="What's up ?"
               className={styles.tweetInput}
-              onChange={(e) => setNewTweet(e.target.value)}
+              onChange={(e) => setNewTweet(e.target.value)
+              }
+              value={newTweet}
             ></input>
           </div>
           <div className={styles.tweetButtonContainer}>

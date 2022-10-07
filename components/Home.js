@@ -35,6 +35,7 @@ function Home() {
   };
 
   const tweets = tweetsData.map((tweet, i) => {
+    // console.log("tweetsData =>", tweetsData)
     const isAuthored = false;
     const isDumped = false;
     // A faire plus tard en fonction du token de la session et du token de la personne qui a tweeté
@@ -42,6 +43,8 @@ function Home() {
       <Tweet key={i} {...tweet} isAuthored={isAuthored} isDumped={isDumped} />
     );
   });
+
+console.log("tweets components", tweets)
 
   return (
     <div className={styles.main}>
